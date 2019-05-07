@@ -1,5 +1,5 @@
 # SensorRecorder
-Simple Sensor Data Recorder for Smartphone and Watch.
+Simple Sensor Data Recorder for Smartphone and Watch using Android. The application was developed using Android Studio. 
 
 # Download
 - The apks can be found here https://github.com/Antidote00/SensorRecorder/releases 
