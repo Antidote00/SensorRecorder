@@ -3,6 +3,7 @@ Simple Sensor Data Recorder for Smartphone and Watch.
 
 # Download
 The apks can be found here https://github.com/Antidote00/SensorRecorder/releases 
+
 The app is also disributed in Google Play under: https://play.google.com/store/apps/details?id=de.tonifetzer.sensorrecorder
 
 # Description
