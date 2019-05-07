@@ -1,5 +1,5 @@
 # SensorRecorder
-Simple Sensor Data Recorder for Smartphone and Watch using Android. The application was developed using Android Studio. 
+Simple Sensor Data Recorder for Smartphone and Watch using Android. The application was developed using Android Studio with minSdkVersion 14 and targetSdkVersion 28. However, Android 7 or higher is recommended.
 
 # Download
 - The apks can be found here https://github.com/Antidote00/SensorRecorder/releases 
