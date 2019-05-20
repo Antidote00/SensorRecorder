@@ -1,5 +1,5 @@
 # SensorRecorder
-Simple Sensor Data Recorder for Smartphone and Watch.
+Simple Sensor Data Recorder for Smartphone and Watch using Android. The application was developed using Android Studio with minSdkVersion 14 and targetSdkVersion 28. However, Android 7 or higher is recommended.
 
 # Download
 - The apks can be found here https://github.com/Antidote00/SensorRecorder/releases 
@@ -14,5 +14,22 @@ The file is named after the current System.currentTimeMillis () timestamp and is
 
 *MainStorage/Android/Data/de.tonifetzer.sensorrecorder/files/documents/sensorOutFiles/...*
 
-However, the path may differ from device to device, depending on whether an SD card is included or not.
+However, the path may differ from device to device, depending on whether an SD card is included or not. The Sensors have the following ID's:
+
+    - ACCELEROMETER(0),
+    - GRAVITY(1),
+    - LINEAR_ACCELERATION(2),
+    - GYROSCOPE(3),
+    - MAGNETIC_FIELD(4),
+    - PRESSURE(5),
+    - ORIENTATION_NEW(6),
+    - ROTATION_MATRIX(7),
+    - WIFI(8), (not supported)
+    - BEACON(9), (not supported)
+    - RELATIVE_HUMIDITY(10),
+    - ORIENTATION_OLD(11),
+    - ROTATION_VECTOR(12),
+    - LIGHT(13),
+    - AMBIENT_TEMPERATURE(14),
+    - HEART_RATE(15),
 
