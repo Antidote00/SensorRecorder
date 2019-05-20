@@ -250,7 +250,7 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
 				listener.onData(SensorType.LINEAR_ACCELERATION,
                         event.values[0] + ";" +
                             event.values[1] + ";" +
-                            event.values[2] + ";"
+                            event.values[2]
 				);
 			}
 

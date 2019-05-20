@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#333"
+    xmlns:ap="http://schemas.android.com/apk/res-auto">
+
+    <com.androidplot.xy.XYPlot
+        style="@style/APDefacto.Dark"
+        android:id="@+id/plot"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        ap:title="Accelerometer Data"
+        ap:rangeTitle="range"
+        ap:domainTitle="size"
+        ap:lineLabels="left|bottom"
+        ap:lineLabelRotationBottom="-45"/>
+
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonAcc"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Accelerometer" />
+
+        <Button
+            android:id="@+id/buttonLinearAcc"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Linear Acc" />
+
+        <Button
+            android:id="@+id/buttonGravity"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Gravity" />
+
+        <Button
+            android:id="@+id/buttonGyro"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Gyroscope" />
+
+        <Button
+            android:id="@+id/buttonBarometer"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Barometer" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="120dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="10dp"
+            android:text="Back" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

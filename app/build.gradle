@@ -6,8 +6,8 @@ android {
         applicationId "de.tonifetzer.sensorrecorder"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.1"
+        versionCode 5
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,4 +25,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "com.androidplot:androidplot-core:1.5.6"
 }
