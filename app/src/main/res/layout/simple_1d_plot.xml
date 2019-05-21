@@ -4,74 +4,121 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#333"
+    android:weightSum="2"
     xmlns:ap="http://schemas.android.com/apk/res-auto">
 
     <com.androidplot.xy.XYPlot
-        style="@style/APDefacto.Dark"
         android:id="@+id/plot"
+        style="@style/APDefacto.Dark"
         android:layout_width="fill_parent"
-        android:layout_height="400dp"
-        ap:title="Accelerometer Data"
-        ap:rangeTitle="range"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         ap:domainTitle="size"
+        ap:lineLabelRotationBottom="-45"
         ap:lineLabels="left|bottom"
-        ap:lineLabelRotationBottom="-45"/>
+        ap:rangeTitle="range"
+        ap:title="Accelerometer Data" />
 
 
     <LinearLayout
 
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
         android:layout_weight="1"
-        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonAcc"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Accelerometer" />
 
-        <Button
-            android:id="@+id/buttonLinearAcc"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Linear Acc" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/buttonGravity"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Gravity" />
+            <Button
+                android:id="@+id/buttonAcc"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Accelerometer" />
 
-        <Button
-            android:id="@+id/buttonGyro"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Gyroscope" />
+            <Button
+                android:id="@+id/buttonLinearAcc"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Linear Acc" />
 
-        <Button
-            android:id="@+id/buttonBarometer"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:text="Barometer" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonBack"
-            android:layout_width="120dp"
-            android:layout_height="36dp"
-            android:layout_marginLeft="250dp"
-            android:layout_marginTop="10dp"
-            android:text="Back" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonGravity"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Gravity" />
+
+            <Button
+                android:id="@+id/buttonGyro"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Gyroscope" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonBarometer"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Barometer" />
+
+            <Button
+                android:id="@+id/buttonOrientation"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Orientation" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:text="Back" />
+
+            <ToggleButton
+                android:id="@+id/buttonPausePlotting"
+                android:layout_width="120dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="5dp"
+                android:textOff="Pause Plot"
+                android:textOn="Resume Plot" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

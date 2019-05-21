@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private Button gravityButton;
     private Button gyroscopeButton;
     private Button barometerButton;
+    private Button orientationButton;
+    private ToggleButton pausePlotButton;
 
     private SimpleXYSeries xBuffer;
     private SimpleXYSeries yBuffer;
@@ -88,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
         gravityButton = plotView.findViewById(R.id.buttonGravity);
         gyroscopeButton = plotView.findViewById(R.id.buttonGyro);
         barometerButton = plotView.findViewById(R.id.buttonBarometer);
+        orientationButton = plotView.findViewById(R.id.buttonOrientation);
+        pausePlotButton = plotView.findViewById(R.id.buttonPausePlotting);
 
         //init the plotter data
         xBuffer = new SimpleXYSeries("x");
@@ -199,6 +203,30 @@ public class MainActivity extends AppCompatActivity {
                 cleanPlotterData();
                 currentSensorToPlot = SensorType.PRESSURE;
                 plotClass.setTitle("Barometer Data");
+            }
+        });
+
+        orientationButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                cleanPlotterData();
+                currentSensorToPlot = SensorType.ORIENTATION_NEW;
+                plotClass.setTitle("Orientation Data");
+            }
+        });
+
+        pausePlotButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    pausePlotButton.setTextOn("Resume Plot");
+                    redrawer.pause();
+                }
+                else{
+                    pausePlotButton.setTextOn("Pause Plot");
+                    redrawer.start();
+                }
             }
         });
 
