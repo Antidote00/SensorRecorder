@@ -320,8 +320,8 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
 		if (mGeomagnetic == null) {return;}
 
 		// calculate rotationMatrix and orientation
-        float[] R = new float[16];
-        float[] I = new float[16];
+        float[] R = new float[9];
+        float[] I = new float[9];
 
 		// derive rotation matrix from grav and geo sensors
 		boolean success = SensorManager.getRotationMatrix(R, I, mGravity, mGeomagnetic);
@@ -343,16 +343,13 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
 
 			// rotation matrix
             //Write the whole rotationMatrix R into the Listener.
-            String sb = String.valueOf(R[0]) + ';' +
-                    R[1] + ';' +
-                    R[2] + ';' +
-                    R[3] + ';' +
-                    R[4] + ';' +
-                    R[5] + ';' +
-                    R[6] + ';' +
-                    R[7] + ';' +
-                    R[8];
-            listener.onData(SensorType.ROTATION_MATRIX, sb);
+            StringBugger sb();
+	    for (int i = 1; i < 8; i++) {
+	    	sb.append(R[i]);
+	    	sb.append(';');
+	    }
+	    sb.append(R[8]);
+            listener.onData(SensorType.ROTATION_MATRIX, sb.toString());
 		}
 
 	}
