@@ -343,7 +343,7 @@ public class PhoneSensors extends MySensor implements SensorEventListener{
 
 			// rotation matrix
             //Write the whole rotationMatrix R into the Listener.
-            StringBugger sb();
+            StringBuffer sb();
 	    for (int i = 1; i < 8; i++) {
 	    	sb.append(R[i]);
 	    	sb.append(';');
